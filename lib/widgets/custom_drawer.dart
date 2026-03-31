@@ -9,9 +9,10 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(MediaQuery.sizeOf(context).height);
     return Drawer(
       shape: RoundedRectangleBorder(borderRadius: .circular(0)),
-      child: Column(
+      child: ListView(
         children: [
           Gap(50),
           UserListTile(
@@ -21,8 +22,28 @@ class CustomDrawer extends StatelessWidget {
           ),
           Gap(50),
           DrawerItem(icon: Assets.imagesDashboard, title: 'Dashboard'),
+          DrawerItem(
+            icon: Assets.imagesMyTransactions,
+            title: 'My Transactions',
+          ),
+          DrawerItem(icon: Assets.imagesStatistics, title: 'Statistics'),
+          DrawerItem(icon: Assets.imagesWalletAccount, title: 'Wallet Account'),
+          DrawerItem(icon: Assets.imagesMyInvestments, title: 'My Investments'),
+          Gap(getDrawerGap(context: context)),
+          DrawerItem(icon: Assets.imagesSettings, title: 'Settings'),
+          DrawerItem(icon: Assets.imagesLogout, title: 'Logout account'),
+          Gap(50),
         ],
       ),
     );
+  }
+}
+
+double getDrawerGap({required BuildContext context}) {
+  final height = MediaQuery.sizeOf(context).height;
+  if (height < 655) {
+    return 0;
+  } else {
+    return height - 655;
   }
 }

@@ -8,12 +8,16 @@ class DrawerItem extends StatelessWidget {
   final String icon, title;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SvgPicture.asset(icon),
-        Gap(16),
-        Text(title, style: AppStyles.styleBold16),
-      ],
+    return AspectRatio(
+      aspectRatio: 232 / 48,
+      child: Row(
+        children: [
+          Gap(28),
+          SvgPicture.asset(icon, height: 24, width: 24),
+          Gap(16),
+          Text(title, style: AppStyles.styleRegular16),
+        ],
+      ),
     );
   }
 }
