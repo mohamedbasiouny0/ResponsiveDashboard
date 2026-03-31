@@ -1,13 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:test1/utils/app_assets.dart';
+import 'package:test1/widgets/drawer_item.dart';
 import 'package:test1/widgets/user_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({
-    super.key,
-  });
+  const CustomDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +20,7 @@ class CustomDrawer extends StatelessWidget {
             subTitle: 'demo@gmail.com',
           ),
           Gap(50),
-          
+          DrawerItem(icon: Assets.imagesDashboard, title: 'Dashboard'),
         ],
       ),
     );
