@@ -11,16 +11,16 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     print(MediaQuery.sizeOf(context).height);
     return Drawer(
+      backgroundColor: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: .circular(0)),
       child: ListView(
         children: [
-          Gap(50),
           UserListTile(
             image: Assets.imagesAvatar3,
             title: 'Mohamed Basiouny',
             subTitle: 'demo@gmail.com',
           ),
-          Gap(50),
+          Gap(20),
           DrawerItem(icon: Assets.imagesDashboard, title: 'Dashboard'),
           DrawerItem(
             icon: Assets.imagesMyTransactions,
@@ -32,7 +32,6 @@ class CustomDrawer extends StatelessWidget {
           Gap(getDrawerGap(context: context)),
           DrawerItem(icon: Assets.imagesSettings, title: 'Settings'),
           DrawerItem(icon: Assets.imagesLogout, title: 'Logout account'),
-          Gap(50),
         ],
       ),
     );
@@ -41,9 +40,9 @@ class CustomDrawer extends StatelessWidget {
 
 double getDrawerGap({required BuildContext context}) {
   final height = MediaQuery.sizeOf(context).height;
-  if (height < 655) {
+  if (height < 580) {
     return 0;
   } else {
-    return height - 655;
+    return height - 580;
   }
 }

@@ -14,12 +14,19 @@ class UserListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 0,
-      child: ListTile(
-        leading: SvgPicture.asset(image),
-        title: Text(title, style: AppStyles.styleSemiBold16),
-        subtitle: Text(subTitle, style: AppStyles.styleRegular12),
+    return Padding(
+      padding: const .symmetric(horizontal: 20, vertical: 8),
+      child: Card(
+        color: Color(0xffFAFAFA),
+        elevation: 0,
+        child: ListTile(
+          leading: SvgPicture.asset(image),
+          title: FittedBox(
+            fit: .scaleDown,
+            child: Text(title, style: AppStyles.styleSemiBold16),
+          ),
+          subtitle: Text(subTitle, style: AppStyles.styleRegular12),
+        ),
       ),
     );
   }
