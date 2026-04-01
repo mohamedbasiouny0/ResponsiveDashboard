@@ -16,7 +16,7 @@ class CustomDrawer extends StatelessWidget {
         children: [
           Gap(50),
           UserListTile(
-            image: Assets.imagesAvatar1,
+            image: Assets.imagesAvatar3,
             title: 'Mohamed Basiouny',
             subTitle: 'demo@gmail.com',
           ),
