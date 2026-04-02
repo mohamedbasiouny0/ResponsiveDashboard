@@ -23,6 +23,7 @@ class UserListTile extends StatelessWidget {
           leading: SvgPicture.asset(image),
           title: FittedBox(
             fit: .scaleDown,
+            alignment: .centerLeft,
             child: Text(title, style: AppStyles.styleSemiBold16),
           ),
           subtitle: Text(subTitle, style: AppStyles.styleRegular12),
