@@ -43,6 +43,7 @@ class _DrawerItemListviewState extends State<DrawerItemListview> {
           child: DrawerItem(
             drawerItemModel: modelList[index],
             selected: activeIndex == index,
+            isLogout: activeIndex == 6,
           ),
         );
       },
