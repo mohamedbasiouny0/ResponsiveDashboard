@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:test1/utils/app_assets.dart';
-import 'package:test1/widgets/drawer_item.dart';
+import 'package:test1/widgets/drawer_item_listview.dart';
 import 'package:test1/widgets/user_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -9,11 +9,11 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.sizeOf(context).height);
+    // print(MediaQuery.sizeOf(context).height);
     return Drawer(
       backgroundColor: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: .circular(0)),
-      child: ListView(
+      child: Column(
         children: [
           UserListTile(
             image: Assets.imagesAvatar3,
@@ -21,28 +21,19 @@ class CustomDrawer extends StatelessWidget {
             subTitle: 'demo@gmail.com',
           ),
           Gap(20),
-          DrawerItem(icon: Assets.imagesDashboard, title: 'Dashboard'),
-          DrawerItem(
-            icon: Assets.imagesMyTransactions,
-            title: 'My Transactions',
-          ),
-          DrawerItem(icon: Assets.imagesStatistics, title: 'Statistics'),
-          DrawerItem(icon: Assets.imagesWalletAccount, title: 'Wallet Account'),
-          DrawerItem(icon: Assets.imagesMyInvestments, title: 'My Investments'),
-          Gap(getDrawerGap(context: context)),
-          DrawerItem(icon: Assets.imagesSettings, title: 'Settings'),
-          DrawerItem(icon: Assets.imagesLogout, title: 'Logout account'),
+          DrawerItemListview(),
         ],
       ),
     );
   }
 }
 
+// Gap(getDrawerGap(context: context)),
 double getDrawerGap({required BuildContext context}) {
   final height = MediaQuery.sizeOf(context).height;
-  if (height < 580) {
+  if (height < 585) {
     return 0;
   } else {
-    return height - 580;
+    return height - 585;
   }
 }
