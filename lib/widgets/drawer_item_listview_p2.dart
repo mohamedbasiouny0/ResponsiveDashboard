@@ -3,23 +3,15 @@ import 'package:test1/models/drawer_item_model.dart';
 import 'package:test1/utils/app_assets.dart';
 import 'package:test1/widgets/drawer_item.dart';
 
-class DrawerItemListview extends StatefulWidget {
-  const DrawerItemListview({super.key});
+class DrawerItemListviewP2 extends StatefulWidget {
+  const DrawerItemListviewP2({super.key});
 
   @override
-  State<DrawerItemListview> createState() => _DrawerItemListviewState();
+  State<DrawerItemListviewP2> createState() => _DrawerItemListviewP1State();
 }
 
-class _DrawerItemListviewState extends State<DrawerItemListview> {
+class _DrawerItemListviewP1State extends State<DrawerItemListviewP2> {
   final List<DrawerItemModel> modelList = [
-    DrawerItemModel(image: Assets.imagesDashboard, title: 'Dashboard'),
-    DrawerItemModel(
-      image: Assets.imagesMyTransactions,
-      title: 'My Transactions',
-    ),
-    DrawerItemModel(image: Assets.imagesStatistics, title: 'Statistics'),
-    DrawerItemModel(image: Assets.imagesWalletAccount, title: 'Wallet Account'),
-    DrawerItemModel(image: Assets.imagesMyInvestments, title: 'My Investments'),
     DrawerItemModel(image: Assets.imagesSettings, title: 'Settings'),
     DrawerItemModel(image: Assets.imagesLogout, title: 'Logout account'),
   ];
@@ -43,7 +35,7 @@ class _DrawerItemListviewState extends State<DrawerItemListview> {
           child: DrawerItem(
             drawerItemModel: modelList[index],
             selected: activeIndex == index,
-            isLogout: activeIndex == 6,
+            isLogout: activeIndex == 1,
           ),
         );
       },
