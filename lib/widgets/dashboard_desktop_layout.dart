@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test1/widgets/all_expenses.dart';
+import 'package:test1/widgets/mid_section.dart';
 import 'package:test1/widgets/custom_drawer.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
@@ -10,7 +10,7 @@ class DashboardDesktopLayout extends StatelessWidget {
     return Row(
       children: [
         CustomDrawer(),
-        Expanded(child: AllExpenses()),
+        Expanded(child: MidSection()),
       ],
     );
   }
