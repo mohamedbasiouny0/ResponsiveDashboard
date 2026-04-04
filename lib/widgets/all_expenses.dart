@@ -1,6 +1,7 @@
 import 'package:flutter/Material.dart';
+import 'package:gap/gap.dart';
 import 'package:test1/widgets/all_expense_list_view.dart';
-import 'package:test1/widgets/all_expenses_row.dart';
+import 'package:test1/widgets/all_expenses_header.dart';
 
 class AllExpenses extends StatelessWidget {
   const AllExpenses({super.key});
@@ -16,10 +17,7 @@ class AllExpenses extends StatelessWidget {
           color: Colors.white,
         ),
         child: Column(
-          children: [
-            AllExpensesRow(),
-            AllExpensesListView(),
-          ],
+          children: [AllExpensesHeader(), Gap(16), AllExpensesListView()],
         ),
       ),
     );
