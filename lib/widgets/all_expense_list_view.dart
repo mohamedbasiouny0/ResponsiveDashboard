@@ -26,7 +26,7 @@ class _AllExpensesListViewState extends State<AllExpensesListView> {
                 setState(() {});
               }
             },
-            child: AllExpensesItem(),
+            child: AllExpensesItem(selected: currentIndex == index),
           );
         },
       ),

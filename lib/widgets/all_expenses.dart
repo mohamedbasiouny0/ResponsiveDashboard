@@ -1,6 +1,5 @@
 import 'package:flutter/Material.dart';
 import 'package:test1/widgets/all_expense_list_view.dart';
-import 'package:test1/widgets/all_expenses_item.dart';
 import 'package:test1/widgets/all_expenses_row.dart';
 
 class AllExpenses extends StatelessWidget {
