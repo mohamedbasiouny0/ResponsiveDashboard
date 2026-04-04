@@ -16,9 +16,7 @@ class AllExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 180,
-      height: 216,
-      padding: .only(right: 20, left: 20, top: 16),
+      padding: .symmetric(horizontal: 20, vertical: 16),
       margin: .only(right: lastItem ? 0 : 12),
       decoration: BoxDecoration(
         borderRadius: .circular(12),
@@ -55,4 +53,3 @@ class AllExpensesItem extends StatelessWidget {
     );
   }
 }
-

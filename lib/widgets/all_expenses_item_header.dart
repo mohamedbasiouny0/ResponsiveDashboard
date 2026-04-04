@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:test1/models/all_expenses_model.dart';
@@ -18,19 +17,22 @@ class AllExpensesItemHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(
+        Container(
+          width: 60,
+          height: 60,
+          padding: EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            shape: .circle,
+            color: selected
+                ? Colors.white.withAlpha(26)
+                : Colors.black.withAlpha(6),
+          ),
+          child: SvgPicture.asset(
             model.headerIconImage,
             colorFilter: .mode(
               selected ? Colors.white : Color(0xff4EB7F2),
               .srcIn,
             ),
-          ),
-          style: IconButton.styleFrom(
-            backgroundColor: selected
-                ? Colors.white.withAlpha(26)
-                : Colors.black.withAlpha(6),
           ),
         ),
         Spacer(),

@@ -1,6 +1,6 @@
 import 'package:flutter/Material.dart';
 import 'package:gap/gap.dart';
-import 'package:test1/widgets/all_expense_list_view.dart';
+import 'package:test1/widgets/all_expense_horizontal_list.dart';
 import 'package:test1/widgets/all_expenses_header.dart';
 
 class AllExpenses extends StatelessWidget {
@@ -18,7 +18,8 @@ class AllExpenses extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: .start,
-          children: [AllExpensesHeader(), Gap(16), AllExpensesListView()],
+          mainAxisSize: .min,
+          children: [AllExpensesHeader(), Gap(16), AllExpensesHorizontalList()],
         ),
       ),
     );
