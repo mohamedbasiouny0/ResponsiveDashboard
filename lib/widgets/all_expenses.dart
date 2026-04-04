@@ -17,6 +17,7 @@ class AllExpenses extends StatelessWidget {
           color: Colors.white,
         ),
         child: Column(
+          crossAxisAlignment: .start,
           children: [AllExpensesHeader(), Gap(16), AllExpensesListView()],
         ),
       ),
