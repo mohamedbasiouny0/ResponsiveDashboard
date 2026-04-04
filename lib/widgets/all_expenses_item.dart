@@ -13,6 +13,7 @@ class AllExpensesItem extends StatelessWidget {
       width: 180,
       height: 216,
       padding: .only(right: 20, left: 20, top: 16),
+      margin: .only(right: 12),
       decoration: BoxDecoration(
         borderRadius: .circular(12),
         color: Color(0xff4EB7F2),
