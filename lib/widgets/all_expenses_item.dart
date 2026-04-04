@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:test1/models/all_expenses_model.dart';
-import 'package:test1/utils/app_assets.dart';
 import 'package:test1/utils/app_styles.dart';
+import 'package:test1/widgets/all_expenses_item_header.dart';
 
 class AllExpensesItem extends StatelessWidget {
   const AllExpensesItem({
@@ -29,39 +28,7 @@ class AllExpensesItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: .start,
         children: [
-          Row(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset(
-                  model.headerIconImage,
-                  colorFilter: .mode(
-                    selected ? Colors.white : Color(0xff4EB7F2),
-                    .srcIn,
-                  ),
-                ),
-                style: IconButton.styleFrom(
-                  backgroundColor: selected
-                      ? Colors.white.withAlpha(26)
-                      : Colors.black.withAlpha(6),
-                ),
-              ),
-              Spacer(),
-              IconButton(
-                onPressed: () {},
-                enableFeedback: false,
-                constraints: BoxConstraints(minHeight: 30, minWidth: 30),
-                style: IconButton.styleFrom(overlayColor: Colors.transparent),
-                icon: SvgPicture.asset(
-                  Assets.imagesArrowRight,
-                  colorFilter: .mode(
-                    selected ? Colors.white : Color(0xff064061),
-                    .srcIn,
-                  ),
-                ),
-              ),
-            ],
-          ),
+          AllExpensesItemHeader(model: model, selected: selected),
           Gap(34),
           Text(
             model.mainText,
@@ -88,3 +55,4 @@ class AllExpensesItem extends StatelessWidget {
     );
   }
 }
+
