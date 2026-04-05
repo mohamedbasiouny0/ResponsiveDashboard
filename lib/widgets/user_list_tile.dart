@@ -9,13 +9,17 @@ class UserListTile extends StatelessWidget {
   final UserListTileModel userListTileModel;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const .symmetric(horizontal: 20, vertical: 8),
-      child: Card(
-        color: Color(0xffFAFAFA),
-        elevation: 0,
+    return Card(
+      // color: Color(0xffFAFAFA),
+      color: Colors.amber,
+      elevation: 0,
+      child: Center(
         child: ListTile(
-          leading: SvgPicture.asset(userListTileModel.avatarImage),
+          leading: SvgPicture.asset(
+            userListTileModel.avatarImage,
+            height: 48,
+            width: 48,
+          ),
           title: FittedBox(
             fit: .scaleDown,
             alignment: .centerLeft,
@@ -33,3 +37,32 @@ class UserListTile extends StatelessWidget {
     );
   }
 }
+
+// class LatestTransactionItem extends StatelessWidget {
+//   const LatestTransactionItem({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       padding: .all(12),
+//       decoration: BoxDecoration(
+//         borderRadius: .circular(8),
+//         color: Colors.amber.shade100,
+//       ),
+//       child: Row(
+//         children: [
+//           SvgPicture.asset(Assets.imagesAvatar1),
+//           Gap(12),
+//           Column(
+//             mainAxisAlignment: .center,
+//             crossAxisAlignment: .start,
+//             children: [
+//               Text('Madrani Andi', style: AppStyles.styleSemiBold16),
+//               Text('Madraniadi20@gmail', style: AppStyles.styleRegular12),
+//             ],
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }

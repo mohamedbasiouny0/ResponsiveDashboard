@@ -23,7 +23,10 @@ class CustomDrawer extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: .circular(0)),
       child: ListView(
         children: [
-          UserListTile(userListTileModel: userListTileModel),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+            child: UserListTile(userListTileModel: userListTileModel),
+          ),
           Gap(20),
           DrawerItemListviewP1(),
           Gap(getDrawerGap(context: context)),
