@@ -10,7 +10,7 @@ class UserListTileListView extends StatelessWidget {
     UserListTileModel(
       avatarImage: Assets.imagesAvatar1,
       name: 'Makram Abed',
-      email: 'Madraniadi20@gmail',
+      email: 'Madraniadi20@gmail.com',
     ),
     UserListTileModel(
       avatarImage: Assets.imagesAvatar2,
@@ -26,16 +26,14 @@ class UserListTileListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 72,
-      child: ListView.builder(
-        scrollDirection: .horizontal,
-        itemCount: usersList.length,
-        itemBuilder: (context, index) {
-          return IntrinsicWidth(
-            child: UserListTile(userListTileModel: usersList[index]),
-          );
-        },
+    return SingleChildScrollView(
+      scrollDirection: .horizontal,
+      child: Row(
+        children: usersList
+            .map(
+              (e) => IntrinsicWidth(child: UserListTile(userListTileModel: e)),
+            )
+            .toList(),
       ),
     );
   }
