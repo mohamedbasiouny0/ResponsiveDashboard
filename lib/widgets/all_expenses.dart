@@ -4,9 +4,7 @@ import 'package:test1/widgets/all_expense_horizontal_list.dart';
 import 'package:test1/widgets/all_expenses_header.dart';
 
 class AllExpenses extends StatelessWidget {
-  const AllExpenses({
-    super.key,
-  });
+  const AllExpenses({super.key});
 
   @override
   Widget build(BuildContext context) {
