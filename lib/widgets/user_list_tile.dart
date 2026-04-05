@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:test1/models/user_list_tile_model.dart';
 import 'package:test1/utils/app_styles.dart';
 
 class UserListTile extends StatelessWidget {
-  const UserListTile({
-    super.key,
-    required this.image,
-    required this.title,
-    required this.subTitle,
-  });
+  const UserListTile({super.key, required this.userListTileModel});
 
-  final String image, title, subTitle;
-
+  final UserListTileModel userListTileModel;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,13 +15,19 @@ class UserListTile extends StatelessWidget {
         color: Color(0xffFAFAFA),
         elevation: 0,
         child: ListTile(
-          leading: SvgPicture.asset(image),
+          leading: SvgPicture.asset(userListTileModel.avatarImage),
           title: FittedBox(
             fit: .scaleDown,
             alignment: .centerLeft,
-            child: Text(title, style: AppStyles.styleSemiBold16),
+            child: Text(
+              userListTileModel.name,
+              style: AppStyles.styleSemiBold16,
+            ),
           ),
-          subtitle: Text(subTitle, style: AppStyles.styleRegular12),
+          subtitle: Text(
+            userListTileModel.email,
+            style: AppStyles.styleRegular12,
+          ),
         ),
       ),
     );
