@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:test1/widgets/quick_invoice_header.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({
@@ -8,6 +9,6 @@ class QuickInvoice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [Row(children: [])]);
+    return Column(children: [QuickInvoiceHeader()]);
   }
 }
