@@ -10,9 +10,7 @@ class MidSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(32),
-      child: SingleChildScrollView(
-        child: Column(children: [AllExpenses(), Gap(24), QuickInvoice()]),
-      ),
+      child: ListView(children: [AllExpenses(), Gap(24), QuickInvoice()]),
     );
   }
 }
