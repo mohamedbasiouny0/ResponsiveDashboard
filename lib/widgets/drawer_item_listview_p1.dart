@@ -12,21 +12,21 @@ class DrawerItemListviewP1 extends StatefulWidget {
 
 class _DrawerItemListviewP1State extends State<DrawerItemListviewP1> {
   final List<DrawerItemModel> modelList = [
-    DrawerItemModel(image: Assets.imagesDashboard, title: 'Dashboard'),
-    DrawerItemModel(
+    const DrawerItemModel(image: Assets.imagesDashboard, title: 'Dashboard'),
+    const DrawerItemModel(
       image: Assets.imagesMyTransactions,
       title: 'My Transactions',
     ),
-    DrawerItemModel(image: Assets.imagesStatistics, title: 'Statistics'),
-    DrawerItemModel(image: Assets.imagesWalletAccount, title: 'Wallet Account'),
-    DrawerItemModel(image: Assets.imagesMyInvestments, title: 'My Investments'),
+    const DrawerItemModel(image: Assets.imagesStatistics, title: 'Statistics'),
+    const DrawerItemModel(image: Assets.imagesWalletAccount, title: 'Wallet Account'),
+    const DrawerItemModel(image: Assets.imagesMyInvestments, title: 'My Investments'),
   ];
   int activeIndex = 0;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: modelList.length,
       itemBuilder: (context, index) {
         return GestureDetector(

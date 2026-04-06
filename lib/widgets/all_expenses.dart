@@ -9,7 +9,7 @@ class AllExpenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBackgroundContainer(
+    return const CustomBackgroundContainer(
       padding: 20,
       child: Column(
         crossAxisAlignment: .start,

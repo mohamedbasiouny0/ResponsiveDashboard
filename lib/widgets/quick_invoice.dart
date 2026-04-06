@@ -12,7 +12,7 @@ class QuickInvoice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBackgroundContainer(
+    return const CustomBackgroundContainer(
       padding: 24,
       child: Column(
         crossAxisAlignment: .start,
@@ -65,7 +65,7 @@ class QuickInvoiceForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
+        const Row(
           children: [
             Expanded(
               child: CustomTextFormField(
@@ -82,8 +82,8 @@ class QuickInvoiceForm extends StatelessWidget {
             ),
           ],
         ),
-        Gap(24),
-        Row(
+        const Gap(24),
+        const Row(
           children: [
             Expanded(
               child: CustomTextFormField(
@@ -95,7 +95,7 @@ class QuickInvoiceForm extends StatelessWidget {
             Expanded(child: ItemMountSection()),
           ],
         ),
-        Gap(24),
+        const Gap(24),
         Row(
           mainAxisAlignment: .center,
           children: [
@@ -109,7 +109,7 @@ class QuickInvoiceForm extends StatelessWidget {
                 backgroundColor: Colors.white,
               ),
             ),
-            Gap(24),
+            const Gap(24),
             Expanded(
               child: CustomElevatedButton(
                 onPressed: () {},

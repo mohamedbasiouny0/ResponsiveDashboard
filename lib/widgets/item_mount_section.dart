@@ -15,7 +15,7 @@ class ItemMountSection extends StatelessWidget {
       crossAxisAlignment: .start,
       children: [
         Text('Item mount', style: AppStyles.styleMedium16),
-        Gap(12),
+        const Gap(12),
         Container(
           padding: const .all(20),
           height: 60,
@@ -28,7 +28,7 @@ class ItemMountSection extends StatelessWidget {
               Text(
                 'USD',
                 style: AppStyles.styleRegular16.copyWith(
-                  color: Color(0xffAAAAAA),
+                  color: const Color(0xffAAAAAA),
                 ),
               ),
               const Gap(10),

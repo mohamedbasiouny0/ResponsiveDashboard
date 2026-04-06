@@ -12,15 +12,15 @@ class DrawerItemListviewP2 extends StatefulWidget {
 
 class _DrawerItemListviewP1State extends State<DrawerItemListviewP2> {
   final List<DrawerItemModel> modelList = [
-    DrawerItemModel(image: Assets.imagesSettings, title: 'Settings'),
-    DrawerItemModel(image: Assets.imagesLogout, title: 'Logout account'),
+    const DrawerItemModel(image: Assets.imagesSettings, title: 'Settings'),
+    const DrawerItemModel(image: Assets.imagesLogout, title: 'Logout account'),
   ];
   int activeIndex = 0;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: modelList.length,
       itemBuilder: (context, index) {
         return GestureDetector(

@@ -11,7 +11,7 @@ class LatestTransactionSection extends StatelessWidget {
       crossAxisAlignment: .start,
       children: [
         Text('Latest Transaction', style: AppStyles.styleMedium16),
-        UserListTileListView(),
+        const UserListTileListView(),
       ],
     );
   }

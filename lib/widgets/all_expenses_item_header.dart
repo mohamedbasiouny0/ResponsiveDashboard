@@ -20,7 +20,7 @@ class AllExpensesItemHeader extends StatelessWidget {
         Container(
           width: 60,
           height: 60,
-          padding: EdgeInsets.all(14),
+          padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
             shape: .circle,
             color: selected
@@ -30,21 +30,21 @@ class AllExpensesItemHeader extends StatelessWidget {
           child: SvgPicture.asset(
             model.headerIconImage,
             colorFilter: .mode(
-              selected ? Colors.white : Color(0xff4EB7F2),
+              selected ? Colors.white : const Color(0xff4EB7F2),
               .srcIn,
             ),
           ),
         ),
-        Spacer(),
+        const Spacer(),
         IconButton(
           onPressed: () {},
           enableFeedback: false,
-          constraints: BoxConstraints(minHeight: 30, minWidth: 30),
+          constraints: const BoxConstraints(minHeight: 30, minWidth: 30),
           style: IconButton.styleFrom(overlayColor: Colors.transparent),
           icon: SvgPicture.asset(
             Assets.imagesArrowRight,
             colorFilter: .mode(
-              selected ? Colors.white : Color(0xff064061),
+              selected ? Colors.white : const Color(0xff064061),
               .srcIn,
             ),
           ),

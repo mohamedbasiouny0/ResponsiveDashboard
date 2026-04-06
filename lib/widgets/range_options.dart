@@ -12,16 +12,16 @@ class RangeOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: .all(12),
+      padding: const .all(12),
       decoration: BoxDecoration(
-        border: Border.all(color: Color(0xffF1F1F1)),
+        border: Border.all(color: const Color(0xffF1F1F1)),
         borderRadius: .circular(12),
         color: Colors.white,
       ),
       child: Row(
         children: [
           Text('Monthly', style: AppStyles.styleMedium16),
-          Gap(18),
+          const Gap(18),
           SvgPicture.asset(Assets.imagesArrowDown),
         ],
       ),

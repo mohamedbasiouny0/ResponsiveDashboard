@@ -16,36 +16,36 @@ class AllExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: .symmetric(horizontal: 20, vertical: 16),
+      padding: const .symmetric(horizontal: 20, vertical: 16),
       margin: .only(right: lastItem ? 0 : 12),
       decoration: BoxDecoration(
         borderRadius: .circular(12),
-        color: selected ? Color(0xff4EB7F2) : Colors.white,
-        border: selected ? null : .all(color: Color(0xffF1F1F1), width: 1),
+        color: selected ? const Color(0xff4EB7F2) : Colors.white,
+        border: selected ? null : .all(color: const Color(0xffF1F1F1), width: 1),
       ),
       child: Column(
         crossAxisAlignment: .start,
         children: [
           AllExpensesItemHeader(model: model, selected: selected),
-          Gap(34),
+          const Gap(34),
           Text(
             model.mainText,
             style: AppStyles.styleSemiBold16.copyWith(
-              color: selected ? Colors.white : Color(0xff064061),
+              color: selected ? Colors.white : const Color(0xff064061),
             ),
           ),
-          Gap(8),
+          const Gap(8),
           Text(
             model.date,
             style: AppStyles.styleRegular14.copyWith(
-              color: selected ? Color(0xffFAFAFA) : Color(0xffAAAAAA),
+              color: selected ? const Color(0xffFAFAFA) : const Color(0xffAAAAAA),
             ),
           ),
-          Gap(16),
+          const Gap(16),
           Text(
             model.money,
             style: AppStyles.styleSemiBold24.copyWith(
-              color: selected ? Colors.white : Color(0xff4EB7F2),
+              color: selected ? Colors.white : const Color(0xff4EB7F2),
             ),
           ),
         ],

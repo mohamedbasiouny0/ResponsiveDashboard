@@ -17,7 +17,7 @@ class CustomTextFormField extends StatelessWidget {
       crossAxisAlignment: .start,
       children: [
         Text(title, style: AppStyles.styleMedium16),
-        Gap(12),
+        const Gap(12),
         TextFormField(
           onTapOutside: (event) => FocusScope.of(context).unfocus(),
           cursorColor: const Color(0xff4EB7F2),
@@ -28,7 +28,7 @@ class CustomTextFormField extends StatelessWidget {
             contentPadding: const .all(20),
             hintText: hintText,
             hintStyle: AppStyles.styleRegular16.copyWith(
-              color: Color(0xffAAAAAA),
+              color: const Color(0xffAAAAAA),
             ),
             border: OutlineInputBorder(
               borderRadius: .circular(12),
@@ -40,7 +40,7 @@ class CustomTextFormField extends StatelessWidget {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: .circular(12),
-              borderSide: BorderSide(color: Color(0xff064061), width: 1),
+              borderSide: const BorderSide(color: Color(0xff064061), width: 1),
             ),
           ),
         ),

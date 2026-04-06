@@ -24,18 +24,18 @@ class ActiveDrawerItem extends StatelessWidget {
       trailing: Container(
         color: selected
             ? isLogout
-                  ? Color(0xFFF3735E)
-                  : Color(0xff4EB7F2)
+                  ? const Color(0xFFF3735E)
+                  : const Color(0xff4EB7F2)
             : Colors.transparent,
         width: 3.5,
       ),
-      contentPadding: .only(left: 16),
+      contentPadding: const .only(left: 16),
       title: Text(
         drawerItemModel.title,
         style: isLogout
             ? GoogleFonts.montserrat(
-                textStyle: TextStyle(
-                  color: const Color(0xFFF3735E),
+                textStyle: const TextStyle(
+                  color: Color(0xFFF3735E),
                   fontSize: 16,
                   fontWeight: .bold,
                 ),
@@ -55,7 +55,7 @@ class InActiveDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image, height: 24, width: 24),
-      contentPadding: .only(left: 16),
+      contentPadding: const .only(left: 16),
       title: Text(drawerItemModel.title, style: AppStyles.styleRegular16),
     );
   }

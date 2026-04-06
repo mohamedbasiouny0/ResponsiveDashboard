@@ -8,11 +8,11 @@ class DashboardDesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
-        CustomDrawer(),
-        Expanded(child: MidSection()),
-        Expanded(child: RightSection()),
+        Expanded(flex: 1, child: CustomDrawer()),
+        Expanded(flex: 3, child: MidSection()),
+        Expanded(flex: 2, child: RightSection()),
       ],
     );
   }

@@ -8,9 +8,9 @@ class DashboardViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomLayoutBuilder(
-      mobileLayout: (context) => SizedBox(),
-      tabletLayout: (context) => SizedBox(),
-      desktopLayout: (context) => DashboardDesktopLayout(),
+      mobileLayout: (context) => const SizedBox(),
+      tabletLayout: (context) => const SizedBox(),
+      desktopLayout: (context) => const DashboardDesktopLayout(),
     );
   }
 }

@@ -12,13 +12,13 @@ class ResponsiveDashboardApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(1440, 982),
+      designSize: const Size(1440, 982),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(debugShowCheckedModeBanner: false, home: child);
       },
-      child: DashboardView(),
+      child: const DashboardView(),
     );
   }
 }
