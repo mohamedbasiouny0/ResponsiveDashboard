@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test1/widgets/mid_section.dart';
 import 'package:test1/widgets/custom_drawer.dart';
+import 'package:test1/widgets/right_section.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -11,6 +12,7 @@ class DashboardDesktopLayout extends StatelessWidget {
       children: [
         CustomDrawer(),
         Expanded(child: MidSection()),
+        Expanded(child: RightSection()),
       ],
     );
   }
