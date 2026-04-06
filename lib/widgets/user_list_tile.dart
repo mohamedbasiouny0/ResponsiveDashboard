@@ -28,6 +28,8 @@ class UserListTile extends StatelessWidget {
             ),
           ),
           subtitle: FittedBox(
+            fit: .scaleDown,
+            alignment: .centerLeft,
             child: Text(
               userListTileModel.email,
               style: AppStyles.styleRegular12,

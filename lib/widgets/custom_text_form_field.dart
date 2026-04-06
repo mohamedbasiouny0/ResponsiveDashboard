@@ -26,11 +26,13 @@ class CustomTextFormField extends StatelessWidget {
             fillColor: const Color(0xffFAFAFA),
             filled: true,
             contentPadding: const .all(20),
-            hint: Text(
-              hintText,
-              style: AppStyles.styleRegular16.copyWith(
-                color: Color(0xffAAAAAA),
-              ),
+            hintText: hintText,
+            hintStyle: AppStyles.styleRegular16.copyWith(
+              color: Color(0xffAAAAAA),
+            ),
+            border: OutlineInputBorder(
+              borderRadius: .circular(12),
+              borderSide: const BorderSide(color: Colors.transparent),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: .circular(12),
