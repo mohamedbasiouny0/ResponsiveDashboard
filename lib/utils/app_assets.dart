@@ -24,7 +24,7 @@ class Assets {
 
   static const String imagesLogout = "assets/images/logout.svg";
 
-  static const String imagesMaskgroup = "assets/images/Mask group.png";
+  static const String imagesMaskGroup = "assets/images/Mask_group.png";
 
   static const String imagesMyInvestments = "assets/images/my_investments.svg";
 
@@ -34,6 +34,8 @@ class Assets {
   static const String imagesSettings = "assets/images/settings.svg";
 
   static const String imagesStatistics = "assets/images/statistics.svg";
+
+  static const String imagesTiger = "assets/images/tiger.png";
 
   static const String imagesWalletAccount = "assets/images/wallet_account.svg";
 }
