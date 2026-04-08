@@ -6,6 +6,9 @@ class RightSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(children: [MyCardSection()]);
+    return const Padding(
+      padding: EdgeInsets.all(32),
+      child: Column(children: [MyCardSection()]),
+    );
   }
 }
