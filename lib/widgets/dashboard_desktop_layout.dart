@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test1/widgets/mid_section.dart';
 import 'package:test1/widgets/custom_drawer.dart';
-import 'package:test1/widgets/right_section.dart';
+import 'package:test1/widgets/my_card_section.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -10,9 +10,9 @@ class DashboardDesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(flex: 1, child: CustomDrawer()),
+        CustomDrawer(),
         Expanded(flex: 3, child: MidSection()),
-        Expanded(flex: 2, child: RightSection()),
+        Expanded(flex: 2, child: MyCardSection()),
       ],
     );
   }

@@ -11,7 +11,7 @@ class MyCardInfo extends StatelessWidget {
     return Column(
       children: [
         ListTile(
-          contentPadding: const .only(top: 20, left: 31, right: 31),
+          contentPadding: const .only(top: 13, left: 31, right: 31),
           title: Text(
             'Mohamed Basiouny',
             style: AppStyles.styleRegular16.copyWith(color: Colors.white),
@@ -37,7 +37,11 @@ class MyCardInfo extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                Text('12/20 - 124', style: AppStyles.styleRegular16),
+                const Gap(8),
+                Text(
+                  '12/20 - 124',
+                  style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                ),
               ],
             ),
           ),
