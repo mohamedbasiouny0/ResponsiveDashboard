@@ -1,13 +1,35 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:test1/utils/app_assets.dart';
 import 'package:test1/utils/app_styles.dart';
 
-class ItemMountSection extends StatelessWidget {
-  const ItemMountSection({
-    super.key,
-  });
+class ItemMountSection extends StatefulWidget {
+  const ItemMountSection({super.key});
+
+  @override
+  State<ItemMountSection> createState() => _ItemMountSectionState();
+}
+
+class _ItemMountSectionState extends State<ItemMountSection> {
+  late List<DropdownMenuItem<String>> items;
+  @override
+  void initState() {
+    items = [
+      const DropdownMenuItem(value: 'EGP', child: Text('EGP')),
+      const DropdownMenuItem(value: 'USD', child: Text('USD')),
+      const DropdownMenuItem(value: 'REL', child: Text('REL')),
+    ];
+    super.initState();
+  }
+
+  String? selectedValue = 'EGP';
+
+  void dropDownCallBack(String? dropDownItem) {
+    selectedValue = dropDownItem;
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,17 +45,20 @@ class ItemMountSection extends StatelessWidget {
             color: const Color(0xffFAFAFA),
             borderRadius: .circular(12),
           ),
-          child: Row(
-            children: [
-              Text(
-                'USD',
-                style: AppStyles.styleRegular16.copyWith(
-                  color: const Color(0xffAAAAAA),
-                ),
-              ),
-              const Gap(10),
-              SvgPicture.asset(Assets.imagesArrowDown),
-            ],
+          child: DropdownButton<String>(
+            
+            dropdownColor: Colors.white,
+            borderRadius: .circular(12),
+            underline: const SizedBox.shrink(),
+            padding: .zero,
+            items: items,
+            value: selectedValue,
+            onChanged: dropDownCallBack,
+            icon: SvgPicture.asset(Assets.imagesArrowDown),
+            isExpanded: true,
+            style: AppStyles.styleRegular16.copyWith(
+              color: const Color(0xffAAAAAA),
+            ),
           ),
         ),
       ],
