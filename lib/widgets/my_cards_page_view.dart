@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:test1/widgets/credit_card_widget.dart';
 
 class MyCardsPageView extends StatelessWidget {
-  const MyCardsPageView({super.key});
-
+  const MyCardsPageView({super.key, required this.pageController});
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return ExpandablePageView(
+      controller: pageController,
       scrollDirection: .horizontal,
       children: List.generate(3, (index) => const CreditCardWidget()),
     );

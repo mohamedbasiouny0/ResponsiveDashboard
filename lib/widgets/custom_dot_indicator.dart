@@ -12,7 +12,7 @@ class CustomDotIndicator extends StatelessWidget {
       width: isActive ? 32 : 8,
       height: 8,
       decoration: BoxDecoration(
-        color: isActive ? const Color(0xff4EB7F2) : Colors.red,
+        color: isActive ? const Color(0xff4EB7F2) : const Color(0xffE8E8E8),
         borderRadius: .circular(12),
       ),
     );
