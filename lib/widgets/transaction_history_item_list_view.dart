@@ -9,20 +9,20 @@ class TransactionHistoryItemListView extends StatelessWidget {
     TransactionItemModel(
       title: 'Cash Withdrawal',
       date: '13 Apr, 2022',
-      money: '20,129',
-      moneyColor: Color(0xffF3735E),
+      amount: '20,129',
+      isWithDrawal: true,
     ),
     TransactionItemModel(
       title: 'Landing Page project',
       date: '13 Apr, 2022 at 3:30 PM',
-      money: '2000',
-      moneyColor: Color(0xff7DD97B),
+      amount: '2000',
+      isWithDrawal: false,
     ),
     TransactionItemModel(
       title: 'Juni Mobile App project',
       date: '13 Apr, 2022 at 3:30 PM',
-      money: '20,129',
-      moneyColor: Color(0xff7DD97B),
+      amount: '20,129',
+      isWithDrawal: false,
     ),
   ];
 

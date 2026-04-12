@@ -13,7 +13,7 @@ class MyCardsPageView extends StatelessWidget {
       children: List.generate(
         3,
         (index) => const Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: .symmetric(horizontal: 8),
           child: CreditCardWidget(),
         ),
       ),

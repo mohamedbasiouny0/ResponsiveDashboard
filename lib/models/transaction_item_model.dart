@@ -1,13 +1,11 @@
-import 'package:flutter/material.dart';
-
 class TransactionItemModel {
-  final String title, date, money;
-  final Color moneyColor;
+  final String title, date, amount;
+  final bool isWithDrawal;
 
   const TransactionItemModel({
     required this.title,
     required this.date,
-    required this.money,
-    required this.moneyColor,
+    required this.amount,
+    required this.isWithDrawal,
   });
 }
