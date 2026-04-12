@@ -1,9 +1,13 @@
-class TransactionItemModel {
-  final String title, subTitle, trailing;
+import 'package:flutter/material.dart';
 
-  TransactionItemModel({
+class TransactionItemModel {
+  final String title, date, money;
+  final Color moneyColor;
+
+  const TransactionItemModel({
     required this.title,
-    required this.subTitle,
-    required this.trailing,
+    required this.date,
+    required this.money,
+    required this.moneyColor,
   });
 }
