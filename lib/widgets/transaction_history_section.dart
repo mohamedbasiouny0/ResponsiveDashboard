@@ -17,10 +17,13 @@ class TransactionHistorySection extends StatelessWidget {
         children: [
           const TransactionHistoryHeader(),
           const Gap(20),
-          Text(
-            '13 April 2022',
-            style: AppStyles.styleMedium16.copyWith(
-              color: const Color(0xffAAAAAA),
+          Align(
+            alignment: .centerLeft,
+            child: Text(
+              '13 April 2022',
+              style: AppStyles.styleMedium16.copyWith(
+                color: const Color(0xffAAAAAA),
+              ),
             ),
           ),
           const Gap(16),
