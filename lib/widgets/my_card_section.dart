@@ -33,15 +33,18 @@ class _MyCardSectionState extends State<MyCardSection> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: .start,
-      children: [
-        Text('My card', style: AppStyles.styleSemiBold20),
-        const Gap(20),
-        MyCardsPageView(pageController: pageController),
-        const Gap(20),
-        CustomSmoothPageIndicator(pageController: pageController),
-      ],
+    return CustomBackgroundContainer(
+      padding: 24,
+      child: Column(
+        crossAxisAlignment: .start,
+        children: [
+          Text('My card', style: AppStyles.styleSemiBold20),
+          const Gap(20),
+          MyCardsPageView(pageController: pageController),
+          const Gap(20),
+          CustomSmoothPageIndicator(pageController: pageController),
+        ],
+      ),
     );
   }
 }
