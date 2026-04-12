@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:test1/utils/app_styles.dart';
 import 'package:test1/widgets/custom_background_contanier.dart';
-import 'package:test1/widgets/dots_indicators.dart';
+import 'package:test1/widgets/custom_smooth_page_indicator.dart';
 import 'package:test1/widgets/my_cards_page_view.dart';
 
 class MyCardSection extends StatefulWidget {
@@ -43,18 +42,8 @@ class _MyCardSectionState extends State<MyCardSection> {
           const Gap(20),
           MyCardsPageView(pageController: pageController),
           const Gap(20),
-          SmoothPageIndicator(
-            controller: pageController,
-            count: 3,
-            effect: const ExpandingDotsEffect(
-              expansionFactor: 3,
-              spacing: 5,
-              dotWidth: 8,
-              dotHeight: 8,
-              dotColor: Color(0xffE8E8E8),
-              activeDotColor: Color(0xff4EB7F2),
-            ),
-          ),
+          CustomSmoothPageIndicator(pageController: pageController),
+          const Divider(height: 40, color: Color(0xffF1F1F1)),
         ],
       ),
     );
