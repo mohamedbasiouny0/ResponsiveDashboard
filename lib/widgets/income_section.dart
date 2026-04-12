@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:test1/widgets/custom_background_contanier.dart';
+import 'package:test1/widgets/income_details.dart';
 import 'package:test1/widgets/income_header.dart';
 
 class IncomeSection extends StatelessWidget {
@@ -9,7 +11,7 @@ class IncomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomBackgroundContainer(
       padding: 20,
-      child: Column(children: [IncomeHeader()]),
+      child: Column(children: [IncomeHeader(), Gap(16), IncomeDetails()]),
     );
   }
 }

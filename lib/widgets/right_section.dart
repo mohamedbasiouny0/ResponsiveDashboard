@@ -12,7 +12,13 @@ class RightSection extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.only(top: 32, right: 32, bottom: 32),
       child: Column(
-        children: [MyCardSection(), Gap(24), TransactionHistorySection(),IncomeSection()],
+        children: [
+          MyCardSection(),
+          Gap(24),
+          TransactionHistorySection(),
+          Gap(24),
+          IncomeSection(),
+        ],
       ),
     );
   }

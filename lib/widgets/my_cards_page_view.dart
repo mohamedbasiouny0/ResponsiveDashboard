@@ -10,7 +10,13 @@ class MyCardsPageView extends StatelessWidget {
     return ExpandablePageView(
       controller: pageController,
       scrollDirection: .horizontal,
-      children: List.generate(3, (index) => const CreditCardWidget()),
+      children: List.generate(
+        3,
+        (index) => const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: CreditCardWidget(),
+        ),
+      ),
     );
   }
 }
