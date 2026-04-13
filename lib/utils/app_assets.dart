@@ -22,8 +22,6 @@ class Assets {
 
   static const String imagesIncome = "assets/images/income.svg";
 
-  static const String imagesIncomeCircle = "assets/images/income_circle.svg";
-
   static const String imagesLogout = "assets/images/logout.svg";
 
   static const String imagesMaskGroup = "assets/images/Mask_group.png";
