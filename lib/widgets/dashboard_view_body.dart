@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test1/widgets/custom_layout_builder.dart';
 import 'package:test1/widgets/dashboard_desktop_layout.dart';
+import 'package:test1/widgets/dashboard_tablet_layout.dart';
 
 class DashboardViewBody extends StatelessWidget {
   const DashboardViewBody({super.key});
@@ -9,7 +10,7 @@ class DashboardViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomLayoutBuilder(
       mobileLayout: (context) => const SizedBox(),
-      tabletLayout: (context) => const SizedBox(),
+      tabletLayout: (context) => const DashboardTabletLayout(),
       desktopLayout: (context) => const DashboardDesktopLayout(),
     );
   }
