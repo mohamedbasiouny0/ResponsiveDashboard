@@ -16,9 +16,9 @@ class TransactionHistoryItem extends StatelessWidget {
         title: Text(model.title, style: AppStyles.styleSemiBold16(context)),
         subtitle: Text(
           model.date,
-          style: AppStyles.styleRegular16(context).copyWith(
-            color: const Color(0xffAAAAAA),
-          ),
+          style: AppStyles.styleRegular16(
+            context,
+          ).copyWith(color: const Color(0xffAAAAAA)),
         ),
         trailing: Text(
           '\$${model.amount}',

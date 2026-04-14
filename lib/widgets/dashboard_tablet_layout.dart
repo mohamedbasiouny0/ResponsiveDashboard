@@ -9,10 +9,11 @@ class DashboardTabletLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        CustomDrawer(),
+        Expanded(flex: 2, child: CustomDrawer()),
         Expanded(
+          flex: 5,
           child: Padding(
-            padding: EdgeInsets.all(32),
+            padding: EdgeInsets.all(16),
             child: DashboardMobileLayout(),
           ),
         ),

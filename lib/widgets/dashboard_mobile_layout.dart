@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:test1/utils/size_config.dart';
 import 'package:test1/widgets/all_expenses.dart';
 import 'package:test1/widgets/income_section.dart';
 import 'package:test1/widgets/my_card_section.dart';
@@ -12,7 +13,9 @@ class DashboardMobileLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(MediaQuery.widthOf(context) < 850 ? 16 : 0),
+      padding: EdgeInsets.all(
+        MediaQuery.widthOf(context) < SizeConfig.tablet ? 16 : 0,
+      ),
       child: ListView(
         children: const [
           AllExpenses(),

@@ -14,7 +14,9 @@ class MyCardInfo extends StatelessWidget {
           contentPadding: const .only(top: 13, left: 31, right: 31),
           title: Text(
             'Mohamed Basiouny',
-            style: AppStyles.styleRegular16(context).copyWith(color: Colors.white),
+            style: AppStyles.styleRegular16(
+              context,
+            ).copyWith(color: Colors.white),
           ),
           subtitle: Text('Syah Bandi', style: AppStyles.styleMedium20(context)),
           trailing: const ClipRRect(
@@ -33,20 +35,22 @@ class MyCardInfo extends StatelessWidget {
               children: [
                 Text(
                   '0918 8124 0042 8129',
-                  style: AppStyles.styleSemiBold24(context).copyWith(
-                    color: Colors.white,
-                  ),
+                  style: AppStyles.styleSemiBold24(
+                    context,
+                  ).copyWith(color: Colors.white),
                 ),
                 const Gap(8),
                 Text(
                   '12/20 - 124',
-                  style: AppStyles.styleRegular16(context).copyWith(color: Colors.white),
+                  style: AppStyles.styleRegular16(
+                    context,
+                  ).copyWith(color: Colors.white),
                 ),
               ],
             ),
           ),
         ),
-        const Gap(27),
+        const Flexible(child: Gap(27)),
       ],
     );
   }
