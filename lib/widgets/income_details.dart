@@ -14,12 +14,12 @@ class IncomeDetails extends StatelessWidget {
 
     return width >= SizeConfig.desktop && width < 1400
         ? const Expanded(child: DetailedIncomeChart())
-        : const Row(
+        : Row(
             children: [
-              Gap(20),
-              Expanded(child: IncomeChart()),
-              Gap(40),
-              Expanded(child: IncomeItemsListView()),
+              width < 600 ? const SizedBox.shrink() : const Gap(20),
+              const Expanded(child: IncomeChart()),
+              width < 600 ? const Gap(20) : const Gap(40),
+              const Expanded(flex: 2, child: IncomeItemsListView()),
             ],
           );
   }
