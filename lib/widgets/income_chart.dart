@@ -11,21 +11,39 @@ class IncomeChart extends StatefulWidget {
 class _IncomeChartState extends State<IncomeChart> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(height: 120, width: 120, child: PieChart(getChartData()));
+    double width = MediaQuery.widthOf(context);
+
+    return AspectRatio(
+      aspectRatio: 1,
+      child: PieChart(getChartData(context, width)),
+    );
   }
 
   int? currentIndex;
 
-  PieChartData getChartData() {
+  double getRadius(int index, double width) {
+    if (currentIndex == index) {
+      return width > 1920 ? width * 1.2 / 1920 * 40 : 40;
+    } else {
+      return width > 1920 ? width * 1.2 / 1920 * 30 : 30;
+    }
+  }
+
+  PieChartData getChartData(BuildContext context, double width) {
     return PieChartData(
       pieTouchData: PieTouchData(
         enabled: true,
-        touchCallback: (p0, pieTouchResponse) {
-          if (currentIndex !=
-              pieTouchResponse?.touchedSection?.touchedSectionIndex) {
-            currentIndex =
-                pieTouchResponse?.touchedSection?.touchedSectionIndex;
-            setState(() {});
+        touchCallback: (event, pieTouchResponse) {
+          if (!event.isInterestedForInteractions ||
+              pieTouchResponse == null ||
+              pieTouchResponse.touchedSection == null) {
+            return;
+          }
+          final index = pieTouchResponse.touchedSection!.touchedSectionIndex;
+          if (currentIndex != index) {
+            setState(() {
+              currentIndex = index;
+            });
           }
         },
       ),
@@ -33,28 +51,26 @@ class _IncomeChartState extends State<IncomeChart> {
       sections: [
         PieChartSectionData(
           showTitle: false,
-          radius: currentIndex == 0 ? 25 : 20,
+          radius: getRadius(0, width),
           value: 40,
           color: const Color(0xff208CC8),
         ),
         PieChartSectionData(
           showTitle: false,
           value: 25,
-          radius: currentIndex == 1 ? 25 : 20,
-
+          radius: getRadius(1, width),
           color: const Color(0xff4EB7F2),
         ),
         PieChartSectionData(
           showTitle: false,
           value: 20,
-          radius: currentIndex == 2 ? 25 : 20,
-
+          radius: getRadius(2, width),
           color: const Color(0xff064061),
         ),
         PieChartSectionData(
           showTitle: false,
           value: 15,
-          radius: currentIndex == 3 ? 25 : 20,
+          radius: getRadius(3, width),
           color: const Color(0xffE2DECD),
         ),
       ],

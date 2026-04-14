@@ -16,7 +16,8 @@ class IncomeDetails extends StatelessWidget {
         ? const Expanded(child: DetailedIncomeChart())
         : const Row(
             children: [
-              IncomeChart(),
+              Gap(20),
+              Expanded(child: IncomeChart()),
               Gap(40),
               Expanded(child: IncomeItemsListView()),
             ],
