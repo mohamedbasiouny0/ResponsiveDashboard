@@ -19,9 +19,13 @@ class UserListTile extends StatelessWidget {
             height: 48,
             width: 48,
           ),
-          title: Text(
-            userListTileModel.name,
-            style: AppStyles.styleSemiBold16(context),
+          title: FittedBox(
+            fit: .scaleDown,
+            alignment: .centerStart,
+            child: Text(
+              userListTileModel.name,
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
           subtitle: FittedBox(
             fit: .scaleDown,
