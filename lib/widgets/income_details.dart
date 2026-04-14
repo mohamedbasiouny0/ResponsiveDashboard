@@ -8,12 +8,15 @@ class IncomeDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        IncomeChart(),
-        Gap(40),
-        Expanded(child: IncomeItemsListView()),
-      ],
-    );
+    double width = MediaQuery.widthOf(context);
+    return width >= 1200 && width < 1400
+        ? const SizedBox()
+        : const Row(
+            children: [
+              IncomeChart(),
+              Gap(40),
+              Expanded(child: IncomeItemsListView()),
+            ],
+          );
   }
 }

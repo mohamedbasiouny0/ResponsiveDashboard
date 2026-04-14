@@ -9,10 +9,10 @@ class RightSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 32, right: 32, bottom: 32),
-      child: ListView(
-        children: const [
+    return const Padding(
+      padding: EdgeInsets.only(top: 32, right: 32, bottom: 32),
+      child: Column(
+        children: [
           MyCardSection(),
           Gap(24),
           TransactionHistorySection(),
