@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:test1/utils/size_config.dart';
+import 'package:test1/widgets/detailed_income_chart.dart';
 import 'package:test1/widgets/income_chart.dart';
 import 'package:test1/widgets/income_items_list_view.dart';
 
@@ -9,8 +11,9 @@ class IncomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.widthOf(context);
-    return width >= 1200 && width < 1400
-        ? const SizedBox()
+
+    return width >= SizeConfig.desktop && width < 1400
+        ? const Expanded(child: DetailedIncomeChart())
         : const Row(
             children: [
               IncomeChart(),

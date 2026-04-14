@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:test1/utils/size_config.dart';
+import 'package:test1/widgets/custom_drawer.dart';
 import 'package:test1/widgets/dashboard_view_body.dart';
 
 class DashboardView extends StatelessWidget {
@@ -6,9 +8,18 @@ class DashboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xffF7F9FA),
-      body: DashboardViewBody(),
+    double width = MediaQuery.widthOf(context);
+    return Scaffold(
+      appBar: width < SizeConfig.tablet
+          ? AppBar(
+              backgroundColor: Colors.white,
+              elevation: 0,
+              scrolledUnderElevation: 0,
+            )
+          : null,
+      drawer: const CustomDrawer(),
+      backgroundColor: const Color(0xffF7F9FA),
+      body: const DashboardViewBody(),
     );
   }
 }

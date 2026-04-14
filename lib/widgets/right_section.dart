@@ -17,7 +17,7 @@ class RightSection extends StatelessWidget {
           Gap(24),
           TransactionHistorySection(),
           Gap(24),
-          IncomeSection(),
+          Expanded(child: IncomeSection()),
         ],
       ),
     );
