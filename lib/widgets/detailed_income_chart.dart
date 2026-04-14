@@ -13,7 +13,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(40),
+      padding: const EdgeInsets.all(16),
       child: AspectRatio(aspectRatio: 1, child: PieChart(getChartData())),
     );
   }
@@ -37,28 +37,43 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
       sections: [
         PieChartSectionData(
           title: currentIndex == 0 ? 'Design service' : '40%',
-          titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
+          titlePositionPercentageOffset: currentIndex == 0 ? 1.5 : null,
+          titleStyle: AppStyles.styleMedium16.copyWith(
+            color: currentIndex == 0 ? Colors.black : Colors.white,
+          ),
           value: 40,
           radius: currentIndex == 0 ? 60 : 50,
           color: const Color(0xff208CC8),
         ),
         PieChartSectionData(
           title: currentIndex == 1 ? 'Design product' : '25%',
-          titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
+          titlePositionPercentageOffset: currentIndex == 1 ? 2.2 : null,
+
+          titleStyle: AppStyles.styleMedium16.copyWith(
+            color: currentIndex == 1 ? Colors.black : Colors.white,
+          ),
           value: 25,
           radius: currentIndex == 1 ? 60 : 50,
           color: const Color(0xff4EB7F2),
         ),
         PieChartSectionData(
           title: currentIndex == 2 ? 'Product royalti' : '20%',
-          titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
+          titlePositionPercentageOffset: currentIndex == 2 ? 1.3 : null,
+
+          titleStyle: AppStyles.styleMedium16.copyWith(
+            color: currentIndex == 2 ? Colors.black : Colors.white,
+          ),
           value: 20,
           radius: currentIndex == 2 ? 60 : 50,
           color: const Color(0xff064061),
         ),
         PieChartSectionData(
           title: currentIndex == 3 ? 'Other' : '15%',
-          titleStyle: AppStyles.styleMedium16.copyWith(color: Colors.white),
+          titlePositionPercentageOffset: currentIndex == 3 ? 1.5 : null,
+
+          titleStyle: AppStyles.styleMedium16.copyWith(
+            color: currentIndex == 3 ? Colors.black : Colors.white,
+          ),
           value: 15,
           radius: currentIndex == 3 ? 60 : 50,
           color: const Color(0xffE2DECD),

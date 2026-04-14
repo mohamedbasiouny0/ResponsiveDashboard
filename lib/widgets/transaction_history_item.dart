@@ -13,19 +13,11 @@ class TransactionHistoryItem extends StatelessWidget {
       elevation: 0,
       child: ListTile(
         contentPadding: const .all(16),
-        title: FittedBox(
-          alignment: .centerLeft,
-          fit: .scaleDown,
-          child: Text(model.title, style: AppStyles.styleSemiBold16),
-        ),
-        subtitle: FittedBox(
-          alignment: .centerLeft,
-          fit: .scaleDown,
-          child: Text(
-            model.date,
-            style: AppStyles.styleRegular16.copyWith(
-              color: const Color(0xffAAAAAA),
-            ),
+        title: Text(model.title, style: AppStyles.styleSemiBold16),
+        subtitle: Text(
+          model.date,
+          style: AppStyles.styleRegular16.copyWith(
+            color: const Color(0xffAAAAAA),
           ),
         ),
         trailing: Text(
