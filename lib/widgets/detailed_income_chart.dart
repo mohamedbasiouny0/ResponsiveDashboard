@@ -38,7 +38,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         PieChartSectionData(
           title: currentIndex == 0 ? 'Design service' : '40%',
           titlePositionPercentageOffset: currentIndex == 0 ? 1.5 : null,
-          titleStyle: AppStyles.styleMedium16.copyWith(
+          titleStyle: AppStyles.styleMedium16(context).copyWith(
             color: currentIndex == 0 ? Colors.black : Colors.white,
           ),
           value: 40,
@@ -49,7 +49,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           title: currentIndex == 1 ? 'Design product' : '25%',
           titlePositionPercentageOffset: currentIndex == 1 ? 2.2 : null,
 
-          titleStyle: AppStyles.styleMedium16.copyWith(
+          titleStyle: AppStyles.styleMedium16(context).copyWith(
             color: currentIndex == 1 ? Colors.black : Colors.white,
           ),
           value: 25,
@@ -60,7 +60,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           title: currentIndex == 2 ? 'Product royalti' : '20%',
           titlePositionPercentageOffset: currentIndex == 2 ? 1.3 : null,
 
-          titleStyle: AppStyles.styleMedium16.copyWith(
+          titleStyle: AppStyles.styleMedium16(context).copyWith(
             color: currentIndex == 2 ? Colors.black : Colors.white,
           ),
           value: 20,
@@ -71,7 +71,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           title: currentIndex == 3 ? 'Other' : '15%',
           titlePositionPercentageOffset: currentIndex == 3 ? 1.5 : null,
 
-          titleStyle: AppStyles.styleMedium16.copyWith(
+          titleStyle: AppStyles.styleMedium16(context).copyWith(
             color: currentIndex == 3 ? Colors.black : Colors.white,
           ),
           value: 15,

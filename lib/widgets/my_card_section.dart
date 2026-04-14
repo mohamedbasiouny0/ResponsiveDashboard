@@ -38,7 +38,7 @@ class _MyCardSectionState extends State<MyCardSection> {
       child: Column(
         crossAxisAlignment: .start,
         children: [
-          Text('My card', style: AppStyles.styleSemiBold20),
+          Text('My card', style: AppStyles.styleSemiBold20(context)),
           const Gap(20),
           MyCardsPageView(pageController: pageController),
           const Gap(20),

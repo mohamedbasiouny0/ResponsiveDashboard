@@ -19,10 +19,13 @@ class UserListTile extends StatelessWidget {
             height: 48,
             width: 48,
           ),
-          title: Text(userListTileModel.name, style: AppStyles.styleSemiBold16),
+          title: Text(
+            userListTileModel.name,
+            style: AppStyles.styleSemiBold16(context),
+          ),
           subtitle: Text(
             userListTileModel.email,
-            style: AppStyles.styleRegular12,
+            style: AppStyles.styleRegular12(context),
           ),
         ),
       ),

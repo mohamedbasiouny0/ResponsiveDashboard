@@ -11,24 +11,27 @@ class RangeOptions extends StatefulWidget {
 }
 
 class _RangeOptionsState extends State<RangeOptions> {
-  List<DropdownMenuItem<String>> items = [
-    DropdownMenuItem<String>(
-      value: 'Daily',
-      child: Text('Daily', style: AppStyles.styleMedium16),
-    ),
-    DropdownMenuItem<String>(
-      value: 'Weekly',
-      child: Text('Week', style: AppStyles.styleMedium16),
-    ),
-    DropdownMenuItem<String>(
-      value: 'Monthly',
-      child: Text('Monthly', style: AppStyles.styleMedium16),
-    ),
-    DropdownMenuItem<String>(
-      value: 'Anualy',
-      child: Text('Anualy', style: AppStyles.styleMedium16),
-    ),
-  ];
+  List<DropdownMenuItem<String>> getItems(BuildContext context) {
+    List<DropdownMenuItem<String>> items = [
+      DropdownMenuItem<String>(
+        value: 'Daily',
+        child: Text('Daily', style: AppStyles.styleMedium16(context)),
+      ),
+      DropdownMenuItem<String>(
+        value: 'Weekly',
+        child: Text('Week', style: AppStyles.styleMedium16(context)),
+      ),
+      DropdownMenuItem<String>(
+        value: 'Monthly',
+        child: Text('Monthly', style: AppStyles.styleMedium16(context)),
+      ),
+      DropdownMenuItem<String>(
+        value: 'Anualy',
+        child: Text('Anualy', style: AppStyles.styleMedium16(context)),
+      ),
+    ];
+    return items;
+  }
 
   String? selectedValue = 'Monthly';
   void dropDownCallBack(String? dropDownItem) {
@@ -50,7 +53,7 @@ class _RangeOptionsState extends State<RangeOptions> {
       child: DropdownButton<String>(
         isExpanded: true,
         underline: const SizedBox.shrink(),
-        items: items,
+        items: getItems(context),
         onChanged: dropDownCallBack,
         value: selectedValue,
         dropdownColor: Colors.white,

@@ -12,11 +12,11 @@ class IncomeDetailsItem extends StatelessWidget {
       children: [
         CircleAvatar(radius: 6, backgroundColor: model.circleColor),
         const Gap(12),
-        Text(model.text, style: AppStyles.styleRegular16),
+        Text(model.text, style: AppStyles.styleRegular16(context)),
         const Spacer(),
         Text(
           '${model.percentage}%',
-          style: AppStyles.styleMedium16.copyWith(
+          style: AppStyles.styleMedium16(context).copyWith(
             color: const Color(0xff208CC8),
           ),
         ),

@@ -35,7 +35,7 @@ class _ItemMountSectionState extends State<ItemMountSection> {
     return Column(
       crossAxisAlignment: .start,
       children: [
-        Text('Item mount', style: AppStyles.styleMedium16),
+        Text('Item mount', style: AppStyles.styleMedium16(context)),
         const Gap(12),
         Container(
           padding: const .all(20),
@@ -55,7 +55,7 @@ class _ItemMountSectionState extends State<ItemMountSection> {
             onChanged: dropDownCallBack,
             icon: SvgPicture.asset(Assets.imagesArrowDown),
             isExpanded: true,
-            style: AppStyles.styleRegular16.copyWith(
+            style: AppStyles.styleRegular16(context).copyWith(
               color: const Color(0xffAAAAAA),
             ),
           ),

@@ -103,7 +103,7 @@ class QuickInvoiceForm extends StatelessWidget {
               child: CustomElevatedButton(
                 onPressed: () {},
                 text: 'Add more details',
-                textStyle: AppStyles.styleSemiBold18.copyWith(
+                textStyle: AppStyles.styleSemiBold18(context).copyWith(
                   color: const Color(0xff4EB7F2),
                 ),
                 backgroundColor: Colors.white,
@@ -114,7 +114,7 @@ class QuickInvoiceForm extends StatelessWidget {
               child: CustomElevatedButton(
                 onPressed: () {},
                 text: 'Send Money',
-                textStyle: AppStyles.styleSemiBold18,
+                textStyle: AppStyles.styleSemiBold18(context),
                 backgroundColor: const Color(0xff4EB7F2),
               ),
             ),

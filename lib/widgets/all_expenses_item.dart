@@ -30,21 +30,21 @@ class AllExpensesItem extends StatelessWidget {
           const Gap(34),
           Text(
             model.mainText,
-            style: AppStyles.styleSemiBold16.copyWith(
+            style: AppStyles.styleSemiBold16(context).copyWith(
               color: selected ? Colors.white : const Color(0xff064061),
             ),
           ),
           const Gap(8),
           Text(
             model.date,
-            style: AppStyles.styleRegular14.copyWith(
+            style: AppStyles.styleRegular14(context).copyWith(
               color: selected ? const Color(0xffFAFAFA) : const Color(0xffAAAAAA),
             ),
           ),
           const Gap(16),
           Text(
             model.money,
-            style: AppStyles.styleSemiBold24.copyWith(
+            style: AppStyles.styleSemiBold24(context).copyWith(
               color: selected ? Colors.white : const Color(0xff4EB7F2),
             ),
           ),
