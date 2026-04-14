@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test1/utils/app_styles.dart';
 import 'package:test1/utils/size_config.dart';
 import 'package:test1/widgets/custom_drawer.dart';
 import 'package:test1/widgets/dashboard_view_body.dart';
@@ -12,6 +13,13 @@ class DashboardView extends StatelessWidget {
     return Scaffold(
       appBar: width < SizeConfig.tablet
           ? AppBar(
+              centerTitle: true,
+              title: Text(
+                'Ali Pay',
+                style: AppStyles.styleSemiBold24(
+                  context,
+                ).copyWith(color: const Color(0xff064061), fontSize: 25),
+              ),
               backgroundColor: Colors.white,
               elevation: 0,
               scrolledUnderElevation: 0,

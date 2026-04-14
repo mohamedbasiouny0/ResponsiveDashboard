@@ -21,31 +21,47 @@ class AllExpensesItem extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: .circular(12),
         color: selected ? const Color(0xff4EB7F2) : Colors.white,
-        border: selected ? null : .all(color: const Color(0xffF1F1F1), width: 1),
+        border: selected
+            ? null
+            : .all(color: const Color(0xffF1F1F1), width: 1),
       ),
       child: Column(
         crossAxisAlignment: .start,
         children: [
           AllExpensesItemHeader(model: model, selected: selected),
           const Gap(34),
-          Text(
-            model.mainText,
-            style: AppStyles.styleSemiBold16(context).copyWith(
-              color: selected ? Colors.white : const Color(0xff064061),
+          FittedBox(
+            fit: .scaleDown,
+            alignment: .centerStart,
+            child: Text(
+              model.mainText,
+              style: AppStyles.styleSemiBold16(context).copyWith(
+                color: selected ? Colors.white : const Color(0xff064061),
+              ),
             ),
           ),
           const Gap(8),
-          Text(
-            model.date,
-            style: AppStyles.styleRegular14(context).copyWith(
-              color: selected ? const Color(0xffFAFAFA) : const Color(0xffAAAAAA),
+          FittedBox(
+            fit: .scaleDown,
+            alignment: .centerStart,
+            child: Text(
+              model.date,
+              style: AppStyles.styleRegular14(context).copyWith(
+                color: selected
+                    ? const Color(0xffFAFAFA)
+                    : const Color(0xffAAAAAA),
+              ),
             ),
           ),
           const Gap(16),
-          Text(
-            model.money,
-            style: AppStyles.styleSemiBold24(context).copyWith(
-              color: selected ? Colors.white : const Color(0xff4EB7F2),
+          FittedBox(
+            fit: .scaleDown,
+            alignment: .centerStart,
+            child: Text(
+              model.money,
+              style: AppStyles.styleSemiBold24(context).copyWith(
+                color: selected ? Colors.white : const Color(0xff4EB7F2),
+              ),
             ),
           ),
         ],

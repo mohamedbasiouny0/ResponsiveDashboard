@@ -37,6 +37,22 @@ class _AllExpensesHorizontalListState extends State<AllExpensesHorizontalList> {
 
   @override
   Widget build(BuildContext context) {
+    // return PageView.builder(
+    //   scrollDirection: .horizontal,
+    //   itemBuilder: (BuildContext context, int index) => GestureDetector(
+    //     onTap: () {
+    //       if (currentIndex != index) {
+    //         currentIndex = index;
+    //         setState(() {});
+    //       }
+    //     },
+    //     child: AllExpensesItem(
+    //       selected: currentIndex == index,
+    //       model: items[index],
+    //     ),
+    //   ),
+    // );
+
     return Row(
       mainAxisSize: .min,
       children: items
@@ -53,8 +69,10 @@ class _AllExpensesHorizontalListState extends State<AllExpensesHorizontalList> {
                 },
                 child: AllExpensesItem(
                   selected: currentIndex == e.key,
-                  model: items[e.key],
+                  model: e.value,
                   lastItem: e.key == items.length - 1,
+
+                  // lastItem: e.key == items.length - 1,
                 ),
               ),
             ),
